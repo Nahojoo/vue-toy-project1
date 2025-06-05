@@ -1,0 +1,21 @@
+/**
+ * src/styles/settings.scss
+ *
+ * Configures SASS variables and Vuetify overwrites
+ */
+
+// https://vuetifyjs.com/features/sass-variables/`
+// src/styles/settings.scss
+@use 'vuetify/settings' with (
+ $body-font-family: ('Noto Sans', sans-serif),
+ $heading-font-family: ('Noto Sans', sans-serif),
+ $button-banner-actions-padding: 16px,
+  $button-height: 32px,
+  $card-actions-padding: 1.5rem 1rem,
+  $app-bar-background: black,
+  $app-bar-color: white,
+  // rgb(var(--v-theme-primary))
+  $app-bar-transition: 0.2s ease-in-out,
+  $card-subtitle-header-padding: 0.5rem,
+  $card-text-flex: 1 1 auto
+);
