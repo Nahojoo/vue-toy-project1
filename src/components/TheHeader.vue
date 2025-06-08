@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar class="px-md-4" color="black" flat scroll-behavior="hide">
+  <v-app-bar class="px-md-4" flat scroll-behavior="hide">
     <h1><v-app-bar-title>Logo</v-app-bar-title></h1>
     <v-spacer />
     <div>
@@ -59,8 +59,5 @@
 <style lang="scss" scoped>
 .active {
   font-weight: bold;
-}
-.v-btn {
-  color: white;
 }
 </style>

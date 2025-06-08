@@ -3,16 +3,18 @@
     class="mx-auto"
     variant="flat"
   >
-    <template #title>{{ title }}</template>
+    <template #title>
+      <h3 class="text-subtitle-1">{{ title }}</h3>
+    </template>
     <template v-if="subTitle" #subtitle>
-      <span class="sub-title">{{ subTitle }}</span>
+      <span class="text-subtitle-1">{{ subTitle }}</span>
     </template>
     <template #item>
-      <p class="text-wrap">{{ info }}</p>
+      <p class="text-wrap text-subtitle-2 text-grey-2">{{ info }}</p>
     </template>
     <template #text>
       <v-img aspect-ratio="16/9" cover :height="height" :src="imgUrl" />
-      <ul v-if="text" class="text pl-4 pt-4">
+      <ul v-if="text" class="text-left pl-4 pt-4">
         <li>{{ text.bed }}</li>
         <li>{{ text.view }}</li>
       </ul>
@@ -44,19 +46,6 @@
 </script>
 
 <style lang="scss" scoped>
-.v-card {
-  background-color: transparent;
-}
-.title {
-  color: rgb(var(--v-theme-primary));
-  font-weight: 800;
-  font-size: 1.5rem;
-}
-.sub-title {
-  border: 1px solid #ccc;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-}
 .text {
   li {
     text-align: left;

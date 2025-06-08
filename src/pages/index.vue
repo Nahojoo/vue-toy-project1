@@ -24,8 +24,8 @@
         width="100%"
       >
         <v-sheet class="fill-height pa-6 d-flex flex-column justify-end pb-14">
-          <h2 class="title text-background text-h4 font-weight-bold">{{ img.title }}</h2>
-          <p class="sub-title pt-1 text-body-1 text-background">{{ img.subTitle }}</p>
+          <h2 class="title text-h3 text-background">{{ img.title }}</h2>
+          <p class="text-body-1 pt-2 text-background">{{ img.subTitle }}</p>
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
@@ -50,7 +50,7 @@
   <v-container
     class="pa-0 d-flex flex-column promotion"
   >
-    <h2 class="mb-8">promotion</h2>
+    <h2 class="mb-8 text-h5 text-center">promotion</h2>
     <GridLayout :custom-cols="4" :items="promo">
       <template #default="{item}">
         <CardItem
@@ -122,8 +122,5 @@
 }
 .promotion {
   margin: 0 auto;
-  h2 {
-    text-align: center
-  }
 }
 </style>
