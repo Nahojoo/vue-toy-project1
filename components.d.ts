@@ -8,12 +8,9 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    AppFooter: typeof import('./src/components/AppFooter.vue')['default']
     BreadCrumbs: typeof import('./src/components/BreadCrumbs.vue')['default']
-    Card: typeof import('./src/components/Card.vue')['default']
     CardItem: typeof import('./src/components/CardItem.vue')['default']
     GridLayout: typeof import('./src/components/GridLayout.vue')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     ParallaxItem: typeof import('./src/components/ParallaxItem.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
