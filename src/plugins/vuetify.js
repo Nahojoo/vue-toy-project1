@@ -13,8 +13,12 @@ import { VBtn } from 'vuetify/components/VBtn'
 const darkTheme = {
   dark: true,
   colors : {
-    primary: '#90CAF9',
-    background: '#2a2a6a',
+    background: '#221f1f',
+    primary: '#1a1818',
+    secondary: '#a89377',
+    surface:'#d5d4d4',
+    'on-surface' :'#e5e4e4',
+    'secondary-darken-1' :'#838282',
   },
 }
 // light mode custom
@@ -22,16 +26,22 @@ const lightTheme = {
   dark: false,
   colors: {
     background: '#FFFFFF',
-    surface: '#FFFFFF',
-    primary: '#3a1212',
-    'primary-darken-1': '#ccc592',
-    secondary: '#003e99',
-    'secondary-darken-1': '#018786',
+    surface: '#F2F2F2',
+    'on-surface' :'#2b2b2b',
+    primary: '#1a1818',
+    'primary-darken-1': '#d5c09a',
+    secondary: '#a89377',
     error: '#B00020',
     info: '#2196F3',
     success: '#4CAF50',
     warning: '#FB8C00',
-    custom: '#dcc2df',
+    'grey-1': '#3b3b3b',
+    'grey-2': '#7b7b7b',
+    'grey-3': '#9E9E9E',
+    'grey-4': '#bdbebe',
+    'grey-5': '#E0E0E0',
+    'grey-6': '#f2f2f2',
+    'grey-7': '#fafafa',
   },
   variables: {
     'border-color': '#dddddd',
@@ -73,9 +83,9 @@ export default createVuetify({
   },
   defaults: {
     VBtnPrimary: {
-      color: 'primary',
+      color: 'secondary',
       variant: 'flat',
-      style: 'height: 40px',
+      style: ['height: 40px'],
       class: ['outlined'],
     },
     VBtnSecondary: {
