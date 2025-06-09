@@ -66,24 +66,35 @@
     <v-sheet class="position-relative">
       <v-img
         cover
-        gradient="to bottom, rgba(168,147,119, 0.0125), rgba(168,147,119,0.6)"
-        height="450"
+        height="400"
         src="https://images.unsplash.com/photo-1587985064135-0366536eab42?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      />
+      >
+        <div class="fill-height bottom-gradient" />
+      </v-img>
       <v-sheet class="content" width="'100%'">
-        <h3 class="text-h5 opacity-90 text-background pb-2 text-shadow">Membership Benefits</h3>
-        <p class="mb-10 opacity-90 text-subtitle-2 text-background text-shadow">멤버십에 가입해 다양한 혜택을 경험해보세요.</p>
+        <div class="d-flex align-center justify-space-between mb-6">
+          <div>
+            <h3 class="text-h5 opacity-90 text-background pb-2 text-shadow">Membership Benefits</h3>
+            <p class="opacity-90 text-body-2 text-background text-shadow">멤버십에 가입해 다양한 혜택을 경험해보세요.</p>
+          </div>
+          <v-btn class="more-btn" icon="mdi-arrow-top-right" />
+        </div>
         <v-container class="bg-opacity-60">
-          <v-row class="pt-6 pb-6" no-gutters>
-            <v-col v-for="(item, index) in benefits" :key="index" cols="12" md="3">
+          <v-row class="pt-4 pb-4 text-center" no-gutters>
+            <v-col
+              v-for="(item, index) in benefits"
+              :key="index"
+              :class="{ 'border-e-sm' : index !== benefits.length -1}"
+              cols="12"
+              md="3"
+            >
               <v-icon
                 class="mb-2"
                 color="grey-1"
                 :icon="item.icon"
-                size="x-large"
               />
-              <h4 class="text-subtitle-1 pt-2">{{ item.title }}</h4>
-              <p>{{ item.desc }}</p>
+              <h4 class="text-subtitle-2 pt-2 pb-1">{{ item.title }}</h4>
+              <p class="text-body-2">{{ item.desc }}</p>
             </v-col>
           </v-row>
         </v-container>
@@ -165,7 +176,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+  }
+  .more-btn {
+
+    &:hover {
+      transform:translate(4px, -4px);
+      transition: all 0.2 ease-in-out;
+    }
   }
 }
 </style>

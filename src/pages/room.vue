@@ -83,10 +83,5 @@
 
 </script>
 <style lang="scss" scoped>
-.card {
-  border: 1px solid #e2e2e2;
-}
-.title {
-  text-align: center;
-}
+
 </style>
