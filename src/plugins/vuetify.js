@@ -20,6 +20,24 @@ const darkTheme = {
     'on-surface' :'#e5e4e4',
     'secondary-darken-1' :'#838282',
   },
+  variables: {
+    'border-color': '#838282',
+    'border-opacity': 1,
+    'high-emphasis-opacity': 0.87,
+    'medium-emphasis-opacity': 0.60,
+    'disabled-opacity': 0.38,
+    'idle-opacity': 0.04,
+    'hover-opacity': 0.04,
+    'focus-opacity': 0.12,
+    'selected-opacity': 0.08,
+    'activated-opacity': 0.12,
+    'pressed-opacity': 0.12,
+    'dragged-opacity': 0.08,
+    'theme-kbd': '#212529',
+    'theme-on-kbd': '#FFFFFF',
+    'theme-code': '#F5F5F5',
+    'theme-on-code': '#000000',
+  },
 }
 // light mode custom
 const lightTheme = {
@@ -44,7 +62,7 @@ const lightTheme = {
     'grey-7': '#fafafa',
   },
   variables: {
-    'border-color': '#dddddd',
+    'border-color': '#7b7b7b',
     'border-opacity': 1,
     'high-emphasis-opacity': 0.87,
     'medium-emphasis-opacity': 0.60,
@@ -85,7 +103,7 @@ export default createVuetify({
     VBtnPrimary: {
       color: 'secondary',
       variant: 'flat',
-      style: ['height: 40px'],
+      style: ['height: 40px', 'padding: 0 1rem'],
       class: ['outlined'],
     },
     VBtnSecondary: {
