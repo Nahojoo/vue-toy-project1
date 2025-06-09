@@ -22,6 +22,15 @@
   $app-bar-transition: 0.2s ease-in-out,
   $app-bar-background: rgb(var(--v-theme-primary)),
   $app-bar-color: white,
+  $icon-sizes: (
+    'x-small': 1rem,
+    'small': 1.5rem,
+    'default': 2rem,
+    'large': 2.5rem,
+    'x-large': 3rem,
+  ),
+  $icon-left-margin-left: 0,
+  $icon-margin-end : 0,
   //타이포
   $typography: (
     'h1': (
