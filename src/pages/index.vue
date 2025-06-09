@@ -38,7 +38,6 @@
     <GridLayout :custom-cols="8" :items="grids">
       <template #default="{item}">
         <CardItem
-          :btn-text="'자세히 보기'"
           :height="450"
           :img-url="item.src"
           :info="item.desc"
@@ -74,12 +73,12 @@
       <v-sheet class="content" width="'100%'">
         <div class="d-flex align-center justify-space-between mb-6">
           <div>
-            <h3 class="text-h5 opacity-90 text-background pb-2 text-shadow">Membership Benefits</h3>
-            <p class="opacity-90 text-body-2 text-background text-shadow">멤버십에 가입해 다양한 혜택을 경험해보세요.</p>
+            <h3 class="text-h5  text-background pb-2 text-shadow">Membership Benefits</h3>
+            <p class=" text-body-2 text-background text-shadow">멤버십에 가입해 다양한 혜택을 경험해보세요.</p>
           </div>
-          <v-btn class="more-btn" icon="mdi-arrow-top-right" />
+          <v-btn class="more-btn" color="" icon="mdi-arrow-top-right" />
         </div>
-        <v-container class="bg-opacity-60">
+        <v-container class="bg-opacity-80">
           <v-row class="pt-4 pb-4 text-center" no-gutters>
             <v-col
               v-for="(item, index) in benefits"
