@@ -138,10 +138,10 @@
   const swiperInstance = ref({})
   const onSwiper = swiper => {
     swiperInstance.value = swiper
-    console.log(swiperInstance)
+    //console.log(swiperInstance)
   }
   const onSlideChange = () => {
-    console.log('slide change');
+    //console.log('slide change');
   };
   const modules = [Pagination, Scrollbar, A11y]
 
