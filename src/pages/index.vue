@@ -111,6 +111,7 @@
                 class="mb-2"
                 color="grey-1"
                 :icon="item.icon"
+                size="large"
               />
               <h4 class="text-subtitle-2 pt-2 pb-1">{{ item.title }}</h4>
               <p class="text-body-2">{{ item.desc }}</p>
