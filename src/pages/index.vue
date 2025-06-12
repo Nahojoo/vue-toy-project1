@@ -30,7 +30,7 @@
       </v-carousel-item>
     </v-carousel>
   </v-container>
-  <!--  -->
+  <!-- intro -->
   <v-container
     class="pa-0 d-flex flex-column section"
     fluid
@@ -38,6 +38,8 @@
     <GridLayout :custom-cols="8" :items="grids">
       <template #default="{item}">
         <CardItem
+          :custom-class="['img-hover']"
+          :font-size="'text-h4'"
           :height="450"
           :img-url="item.src"
           :info="item.desc"
@@ -64,10 +66,11 @@
       >
         <swiper-slide v-for="(item, index) in promo" :key="index">
           <CardItem
-            :custom-class="'text-center'"
+            :custom-class="['text-center']"
             :height="250"
             :img-url="item.src"
             :title="item.title"
+            to="/"
             :variant="'outlined'"
           />
         </swiper-slide>
@@ -98,7 +101,7 @@
             <v-col
               v-for="(item, index) in benefits"
               :key="index"
-              :class="{ 'border-e-sm' : index !== benefits.length -1}"
+              :class="{'border' : index !== benefits.length -1}"
               cols="12"
               md="3"
             >
