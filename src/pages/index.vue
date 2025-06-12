@@ -30,7 +30,7 @@
       </v-carousel-item>
     </v-carousel>
   </v-container>
-
+  <!--  -->
   <v-container
     class="pa-0 d-flex flex-column section"
     fluid
@@ -46,19 +46,34 @@
       </template>
     </GridLayout>
   </v-container>
+  <!-- 프로모션 -->
   <v-container
     class="pa-0 d-flex flex-column promotion"
   >
-    <h2 class="mb-8 text-h5 text-center">promotion</h2>
-    <GridLayout :custom-cols="4" :items="promo">
-      <template #default="{item}">
-        <CardItem
-          :height="250"
-          :img-url="item.src"
-          :title="item.title"
-        />
-      </template>
-    </GridLayout>
+    <div class="position-relative">
+      <h2 class="mb-8 text-h4 text-center">promotion</h2>
+      <!-- Slider  -->
+      <NextButton :swiper="swiperInstance" />
+      <PrevButton :swiper="swiperInstance" />
+      <swiper
+        :modules="modules"
+        :slides-per-view="3"
+        :space-between="20"
+        @slide-change="onSlideChange"
+        @swiper="onSwiper"
+      >
+        <swiper-slide v-for="(item, index) in promo" :key="index">
+          <CardItem
+            :custom-class="'text-center'"
+            :height="250"
+            :img-url="item.src"
+            :title="item.title"
+            :variant="'outlined'"
+          />
+        </swiper-slide>
+      </swiper>
+    </div>
+
   </v-container>
   <!-- 멤버십 혜택 -->
   <v-container class="pa-0 mt-16 membership-section" fluid>
@@ -76,7 +91,7 @@
             <h3 class="text-h5  text-background pb-2 text-shadow">Membership Benefits</h3>
             <p class=" text-body-2 text-background text-shadow">멤버십에 가입해 다양한 혜택을 경험해보세요.</p>
           </div>
-          <v-btn class="more-btn" color="" icon="mdi-arrow-top-right" />
+          <v-btn class="more-btn" icon="mdi-arrow-top-right" />
         </div>
         <v-container class="bg-opacity-80">
           <v-row class="pt-4 pb-4 text-center" no-gutters>
@@ -105,6 +120,26 @@
 
 <script setup>
   import GridLayout from '@/components/GridLayout.vue';
+  import { ref } from 'vue'
+  // Import Swiper Vue.js components
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+  import { A11y, Pagination, Scrollbar } from 'swiper/modules';
+
+  // Import Swiper styles
+  import 'swiper/scss';
+  import 'swiper/scss/navigation';
+  import 'swiper/scss/pagination';
+  import 'swiper/scss/scrollbar';
+
+  const swiperInstance = ref({})
+  const onSwiper = swiper => {
+    swiperInstance.value = swiper
+    console.log(swiperInstance)
+  }
+  const onSlideChange = () => {
+    console.log('slide change');
+  };
+  const modules = [Pagination, Scrollbar, A11y]
 
   // carousel
   const imgs = [
@@ -128,10 +163,19 @@
   const promo = [
     {
       src: 'https://images.unsplash.com/photo-1562022791-9e287ba5708a?q=80&w=3250&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: '여름 한정 메뉴',
-    },{
+      title: '여름 맞이 디저트 출시',
+    },
+    {
       src: 'https://images.unsplash.com/photo-1586105251261-72a756497a11?q=80&w=3058&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: '사전 예약 10% 할인 혜택',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      title: '생일 축하 패키지',
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1623718649591-311775a30c43?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      title: '여름 맞이 수영장 패키지 오픈',
     },
     {
       src: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -152,9 +196,6 @@
 .section {
   margin: 4rem 0 10rem;
 }
-.v-sheet {
-  background-color: transparent;
-}
 .v-col {
   padding: 0;
 }
@@ -165,7 +206,9 @@
   background-color: transparent;
 }
 .promotion {
-  margin: 0 auto;
+  .swiper {
+    width: 100%;
+  }
 }
 // membership
 .membership-section {
@@ -177,7 +220,6 @@
     transform: translate(-50%, -50%);
   }
   .more-btn {
-
     &:hover {
       transform:translate(4px, -4px);
       transition: all 0.2 ease-in-out;

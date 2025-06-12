@@ -10,15 +10,23 @@
   // 폰트 변경
   $body-font-family: ('Noto Sans', sans-serif),
   $heading-font-family: ('Noto Sans', sans-serif),
+  // 시트
+  $sheet-background: 'transparent',
+  $container-padding-x: 0,
   // 카드 스타일
   $card-background: transparent,
   $card-subtitle-header-padding: 0.5rem,
   $card-actions-padding: 1.5rem 1rem,
   $card-text-flex: 1 1 auto,
+  $card-text-padding: 0,
   // 앱바
   $app-bar-transition: 0.2s ease-in-out,
   $app-bar-background: rgb(var(--v-theme-primary)),
-  $app-bar-color: white,
+  $app-bar-color: rgb(var(--v-theme-background)),
+  //버튼
+  $button-icon-density: ('default': 4, 'comfortable': 2, 'compact': 0),
+  $button-icon-font-size: 1rem,
+  //아이콘
   $icon-sizes: (
     'x-small': 1rem,
     'small': 1.5rem,

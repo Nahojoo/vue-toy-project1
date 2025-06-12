@@ -4,8 +4,8 @@
       <v-parallax max-height="400" :src="imgUrl">
         <div class="d-flex flex-column fill-height justify-center align-center text-white">
           <BreadCrumbs />
-          <h2 class="pb-2 text-h2">{{ pageTitle }}</h2>
-          <p class="text-wrap">{{ desc }}
+          <h2 class="pb-2 text-h3 text-shadow">{{ pageTitle }}</h2>
+          <p class="text-wrap text-shadow">{{ desc }}
           </p>
         </div>
       </v-parallax>

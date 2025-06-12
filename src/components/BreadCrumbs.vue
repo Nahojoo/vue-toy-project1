@@ -1,5 +1,5 @@
 <template>
-  <v-breadcrumbs class="position-absolute bottom-0 left-0" :items="links">
+  <v-breadcrumbs class="position-absolute bottom-0 left-0 text-shadow" :items="links">
     <template #prepend>
       <v-icon icon="mdi-home" size="small" />
     </template>

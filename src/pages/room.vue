@@ -9,9 +9,9 @@
       <template #default="{item}">
         <CardItem
           :id="item.id"
+          :border="'border'"
           :btn-second-text="'예약하기'"
           :btn-text="'자세히보기'"
-          class="card"
           :height="300"
           :img-url="item.imgUrl"
           :info="item.info"
@@ -19,6 +19,7 @@
           :sub-title="item.subTitle"
           :text="item.text"
           :title="item.title"
+          :variant="'outlined'"
         />
       </template>
     </GridLayout>
@@ -78,10 +79,9 @@
   ]
 
   const src = ref('https://images.unsplash.com/photo-1587985064135-0366536eab42?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  const title = ref('room')
-  const desc = ref('dd')
+  const title = ref('Room')
+  const desc = ref('고급스러움부터 아늑함까지, 원하는 분위기에 맞춘 객실들로 특별한 하루를 완성하세요.')
 
 </script>
 <style lang="scss" scoped>
-
 </style>

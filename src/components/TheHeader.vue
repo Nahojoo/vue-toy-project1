@@ -19,7 +19,6 @@
       </v-menu>
       <v-btn
         :prepend-icon="theme === 'lightTheme' ? 'mdi-weather-sunny' : 'mdi-weather-night'"
-        slim
         @click="toggleTheme"
       />
     </div>

@@ -21,7 +21,7 @@ const darkTheme = {
     'secondary-darken-1' :'#838282',
   },
   variables: {
-    'border-color': '#838282',
+    'border-color': '#e5e4e4',
     'border-opacity': 1,
     'high-emphasis-opacity': 0.87,
     'medium-emphasis-opacity': 0.60,
@@ -44,7 +44,7 @@ const lightTheme = {
   dark: false,
   colors: {
     background: '#FFFFFF',
-    surface: '#F2F2F2',
+    surface: '#FFFFFF',
     'on-surface' :'#2b2b2b',
     primary: '#1a1818',
     'primary-darken-1': '#d5c09a',
@@ -62,7 +62,7 @@ const lightTheme = {
     'grey-7': '#fafafa',
   },
   variables: {
-    'border-color': '#7b7b7b',
+    'border-color': '#e5e4e4',
     'border-opacity': 1,
     'high-emphasis-opacity': 0.87,
     'medium-emphasis-opacity': 0.60,

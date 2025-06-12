@@ -33,6 +33,8 @@
             <v-select
               density="comfortable"
               :items="['family1', 'family2', 'family3', 'family4', ]"
+              label="Family Site"
+              min-width="200"
               variant="outlined"
             />
           </div>
