@@ -1,8 +1,8 @@
 <template>
   <v-btn
-    class="pa-2 mr-12 position-absolute d-flex align-center justify-center right-0 top-0 bg-white "
+    class="pa-2 mr-11 position-absolute d-flex align-center justify-center right-0 top-0 bg-white "
     icon="mdi-arrow-left"
-    size="x-small"
+    size="small"
     @click="slidePrev"
   />
 </template>

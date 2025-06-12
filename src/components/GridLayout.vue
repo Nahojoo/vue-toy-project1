@@ -9,7 +9,7 @@
       :key="idx"
       :cols="customCols"
     >
-      <slot :item="item" />
+      <slot :index="idx" :item="item" />
     </v-col>
   </v-row>
 </template>
@@ -29,8 +29,5 @@
 <style lang="scss" scoped>
 .v-col {
   text-align: center;
-}
-.v-col-8 {
-  padding: 2rem 0;
 }
 </style>

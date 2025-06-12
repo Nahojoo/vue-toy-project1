@@ -12,12 +12,12 @@
           :border="'border'"
           :btn-second-text="'예약하기'"
           :btn-text="'자세히보기'"
+          :desc="item.text"
           :height="300"
           :img-url="item.imgUrl"
           :info="item.info"
           second
           :sub-title="item.subTitle"
-          :text="item.text"
           :title="item.title"
           :variant="'outlined'"
         />

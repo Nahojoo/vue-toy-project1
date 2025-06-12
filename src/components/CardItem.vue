@@ -5,22 +5,20 @@
     :class="[customClass]"
     :variant="variant"
   >
-    <template #title>
+    <template v-if="title" #title>
       <h3 class="pt-2 pb-2" :class="[customClass, fontSize]">{{ title }}</h3>
     </template>
-    <template v-if="subTitle" #subtitle>
-      <span class="text-body-2 pa-1 border">{{ subTitle }}</span>
-    </template>
-    <template #item>
-      <p class="text-wrap text-body-2 text-grey-1 pt-2">{{ info }}</p>
+    <template v-if="subTitle || info" #subtitle>
+      <span v-if="subTitle" class="text-body-2 pa-1 border text-grey-1">{{ subTitle }}</span>
+      <p v-if="info" class="text-wrap text-body-2 pt-2 pb-2 text-items">{{ info }}</p>
     </template>
     <template #text>
       <span class="overflow-hidden d-block">
-        <v-img aspect-ratio="16/9" cover :height="height" :src="imgUrl" />
+        <v-img aspect-ratio="" cover :height="height" :src="imgUrl" />
       </span>
-      <ul v-if="text" class="text-left ml-4 pl-4 pt-4">
-        <li>{{ text.bed }}</li>
-        <li>{{ text.view }}</li>
+      <ul v-if="desc" class="text-left ml-4 pl-4 pt-4">
+        <li>{{ desc.bed }}</li>
+        <li>{{ desc.view }}</li>
       </ul>
     </template>
     <!-- buttons -->
@@ -34,9 +32,11 @@
 <script setup>
   defineProps({
     title: String,
-    subTitle: String,
+    subTitle: {
+      type:String,
+    },
     imgUrl: String,
-    text: {
+    desc: {
       type: Object,
       default: null,
     },
@@ -60,11 +60,6 @@
 </script>
 
 <style lang="scss" scoped>
-.text {
-  li {
-    text-align: left;
-  }
-}
 .v-card--variant-outlined {
   border: thin solid rgb(var(--v-border-color))!important;
 }
@@ -75,5 +70,4 @@
   transform: scale(1.1);
   }
 }
-
 </style>

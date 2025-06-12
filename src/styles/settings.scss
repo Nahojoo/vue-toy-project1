@@ -24,13 +24,13 @@
   $app-bar-background: rgb(var(--v-theme-primary)),
   $app-bar-color: rgb(var(--v-theme-background)),
   //버튼
-  $button-icon-density: ('default': 4, 'comfortable': 2, 'compact': 0),
-  $button-icon-font-size: 1rem,
+  $button-icon-density: ('default': 2, 'comfortable': 0, 'compact': -2),
   //아이콘
+  $icon-size: 1rem,
   $icon-sizes: (
     'x-small': 1rem,
     'small': 1.5rem,
-    'default': 2rem,
+    'default': 1.25rem,
     'large': 2.5rem,
     'x-large': 3rem,
   ),

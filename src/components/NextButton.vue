@@ -2,7 +2,7 @@
   <v-btn
     class="pa-2 position-absolute d-flex align-center justify-center right-0 top-0"
     icon="mdi-arrow-right"
-    size="x-small"
+    size="small"
     @click="slideNext"
   />
 </template>

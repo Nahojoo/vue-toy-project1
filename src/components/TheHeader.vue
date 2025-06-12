@@ -1,6 +1,6 @@
 <template>
   <v-app-bar class="px-md-4" flat scroll-behavior="hide">
-    <h1><v-app-bar-title>Logo</v-app-bar-title></h1>
+    <h1><v-app-bar-title class="font-weight-bold">Logo</v-app-bar-title></h1>
     <v-spacer />
     <div>
       <v-btn :to="'/login'">로그인</v-btn>
@@ -18,7 +18,8 @@
         </v-list>
       </v-menu>
       <v-btn
-        :prepend-icon="theme === 'lightTheme' ? 'mdi-weather-sunny' : 'mdi-weather-night'"
+        :icon="theme === 'lightTheme' ? 'mdi-weather-sunny' : 'mdi-weather-night'"
+        size="x-small"
         @click="toggleTheme"
       />
     </div>
