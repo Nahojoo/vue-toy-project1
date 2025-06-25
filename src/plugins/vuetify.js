@@ -13,8 +13,8 @@ import { VBtn } from 'vuetify/components/VBtn'
 const darkTheme = {
   dark: true,
   colors : {
-    background: '#221f1f',
-    primary: '#1a1818',
+    background: '#212529',
+    primary: '#d5d4d4',
     secondary: '#a89377',
     surface:'#d5d4d4',
     'on-surface' :'#e5e4e4',
