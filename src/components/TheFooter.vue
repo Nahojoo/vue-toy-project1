@@ -1,16 +1,15 @@
 <template>
-  <v-footer class="d-flex align-start py-4" color="primary">
-    <v-row class="justify-space-between	d-flex" width="'100%'">
-      <v-col class="opacity-60" cols="3">
+  <v-footer class="px-md-4" color="primary" height="200">
+    <ul class="d-flex w-100 justify-space-between">
+      <li class="opacity-60">
         <p>
           <span>체크인 16:00</span>
           <span>체크아웃 11:00</span>
         </p>
         <p><span>이메일</span>hotel@sample.com</p>
         <p><span>Tel</span>00-0000-0000</p>
-      </v-col>
-
-      <v-col class="text-caption d-flex flex-column align-end ga-4	font-weight-regular opacity-80" cols="6">
+      </li>
+      <li class="text-caption d-flex flex-column align-end ga-4	font-weight-regular opacity-80">
         <div class="d-flex ga-md-6">
           <v-btn-tertiary>호텔소개</v-btn-tertiary>
           <v-btn-tertiary>오시는 길</v-btn-tertiary>
@@ -20,7 +19,7 @@
           <v-btn-tertiary>개인정보처리방침</v-btn-tertiary>
         </div>
         <div class="d-flex align-start ga-4">
-          <div class="d-flex ga-3 opacity-80" cols="3">
+          <div class="d-flex ga-3 opacity-80">
             <v-btn
               v-for="icon in icons"
               :key="icon"
@@ -39,9 +38,8 @@
             />
           </div>
         </div>
-      </v-col>
-    </v-row>
-
+      </li>
+    </ul>
   </v-footer>
 </template>
 
@@ -54,11 +52,10 @@
   ]
 </script>
 <style lang="scss" scoped>
-.v-row {
-  width: 100%;
-  padding: 3rem;
+li {
+  list-style: none;
 }
-.v-col {
-  padding: 0;
+footer{
+  flex-grow: 0;
 }
 </style>
